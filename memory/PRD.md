@@ -53,7 +53,17 @@ Premium, conversion-focused digital showroom for Just Ride Cycles, Kumbakonam's 
 
 ## What's Been Implemented
 
-### Version 1.0 – MVP (April 2026)
+### Version 1.1 – Premium Upgrade (April 2026)
+- [x] **Hero redesign:** Gradient cycling text (Mountain Bike/Road Bike/Kids Cycle/Perfect Ride animates every 2.8s)
+- [x] **Mouse parallax:** Hero background image moves subtly with cursor position
+- [x] **Decorative spinning bicycle wheels:** Two semi-transparent SVG wheels in hero background (12s rotation)
+- [x] **Glassmorphism stats bar:** Bottom of hero — 4.9★ / 554+ / 100+ / 7 Days — beautiful blur effect
+- [x] **Premium CTA buttons:** Green glow shadow on "View Cycles", glass/blur effect on "Rent Now"
+- [x] **Animated badge:** Shimmer sweep effect on "Kumbakonam's #1 Cycle Shop" badge
+- [x] **Brands Marquee:** Infinite scrolling ticker — HERCULES · HERO CYCLES · FIREFOX · MACH CITY · BSA...
+- [x] **Cursor glow:** Ambient green radial gradient follows cursor across entire site
+- [x] **TrustBar redesign:** Dark premium cards with icon pills, hover glow, bottom accent line animation
+- [x] **Accent underline:** Animated width + shimmer under the gradient headline
 - [x] Sticky glassmorphism navbar with logo, nav links, WhatsApp CTA, hamburger mobile menu
 - [x] Hero section: fullscreen shop exterior photo + Ken Burns zoom animation
 - [x] Trust bar: 4 stats with count-up animation (4.9★, 554+, 100+, Since 2018)

@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import TrustBar from './components/TrustBar';
+import BrandsMarquee from './components/BrandsMarquee';
 import ShowroomSection from './components/ShowroomSection';
 import ScrollAnimationSection from './components/ScrollAnimationSection';
 import CategoriesSection from './components/CategoriesSection';
@@ -14,14 +15,17 @@ import GallerySection from './components/GallerySection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
+import CursorGlow from './components/CursorGlow';
 
 function App() {
   return (
     <div className="App overflow-x-hidden">
+      <CursorGlow />
       <Navbar />
       <main>
         <HeroSection />
         <TrustBar />
+        <BrandsMarquee />
         <ShowroomSection />
         <ScrollAnimationSection />
         <CategoriesSection />

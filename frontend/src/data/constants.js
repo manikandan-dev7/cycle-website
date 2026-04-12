@@ -76,7 +76,7 @@ export const CYCLES = [
     badge: "City",
     specs: ["Single Speed", "Lightweight", "Urban"],
     brand: "Mach City",
-    image: IMAGES.brownBike,
+    image: IMAGES.gearDetail,
     badgeColor: "#ea580c",
   },
   {

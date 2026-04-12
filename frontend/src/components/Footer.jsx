@@ -6,81 +6,71 @@ export default function Footer() {
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <footer className="bg-[#111111] text-white">
+    <footer className="carbon-bg text-white relative">
+      {/* Top metallic edge */}
+      <div className="absolute top-0 left-0 right-0 h-px"
+        style={{ background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent)' }} />
+
       {/* Social Strip */}
-      <div className="border-b border-white/10 py-8">
+      <div className="py-7" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[#64748b] text-sm">Follow our journey</p>
-          <div className="flex items-center gap-4">
-            <a
-              href={SHOP.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="social-instagram"
-              className="flex items-center gap-2 text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
-            >
-              <Instagram className="w-4 h-4" />
-              @justridecycles
-            </a>
-            <div className="w-px h-4 bg-white/10" />
-            <a
-              href={SHOP.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="social-facebook"
-              className="flex items-center gap-2 text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
-            >
-              <Facebook className="w-4 h-4" />
-              Just Ride Cycles
-            </a>
-            <div className="w-px h-4 bg-white/10" />
-            <a
-              href={WA_GENERAL}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="social-whatsapp"
-              className="flex items-center gap-2 text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
-            >
-              <MessageCircle className="w-4 h-4" />
-              WhatsApp
-            </a>
+          <p className="text-[#3a3a3a] text-sm font-medium tracking-wide">Follow our journey</p>
+          <div className="flex items-center gap-5">
+            {[
+              { href: SHOP.instagram, icon: Instagram, label: '@justridecycles', testId: 'social-instagram' },
+              { href: SHOP.facebook,  icon: Facebook,  label: 'Just Ride Cycles', testId: 'social-facebook' },
+              { href: WA_GENERAL,    icon: MessageCircle, label: 'WhatsApp', testId: 'social-whatsapp' },
+            ].map(({ href, icon: Icon, label, testId }) => (
+              <a key={testId} href={href} target="_blank" rel="noopener noreferrer"
+                data-testid={testId}
+                className="flex items-center gap-2 text-[#3a3a3a] hover:text-[#f97316] transition-colors text-sm"
+              >
+                <Icon className="w-4 h-4" />
+                {label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Main footer */}
+      {/* Main columns */}
       <div className="py-14 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-14">
+
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
-              <div className="flex items-center gap-3 mb-4">
-                <img src={IMAGES.logo} alt="Just Ride Cycles" className="w-9 h-9 object-contain rounded-lg border border-white/10" />
-                <span className="font-black text-base" style={{ fontFamily: 'Outfit, sans-serif' }}>
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-9 h-9 rounded-lg overflow-hidden"
+                  style={{
+                    border: '1px solid rgba(255,255,255,0.08)',
+                    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.12), 0 2px 6px rgba(0,0,0,0.5)',
+                  }}
+                >
+                  <img src={IMAGES.logo} alt="Just Ride Cycles" className="w-full h-full object-contain" />
+                </div>
+                <span className="chrome-text font-black text-base" style={{ fontFamily: 'Outfit, sans-serif' }}>
                   Just Ride Cycles
                 </span>
               </div>
-              <p className="text-[#64748b] text-sm leading-relaxed mb-4">
-                Kumbakonam's #1 cycle shop.<br />
-                Trusted since 2018.
+              <p className="text-[#3a3a3a] text-sm leading-relaxed mb-4">
+                Kumbakonam's #1 cycle shop.<br />Trusted since 2018.
               </p>
               <div className="flex items-center gap-1.5">
-                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                <span className="text-white font-bold text-sm">4.9</span>
-                <span className="text-[#64748b] text-sm">· 554 Reviews</span>
+                <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
+                <span className="chrome-text font-bold text-sm">4.9</span>
+                <span className="text-[#3a3a3a] text-sm">· 554 Reviews</span>
               </div>
             </div>
 
             {/* Cycles */}
             <div>
-              <h4 className="text-white font-bold text-sm mb-4">Cycles</h4>
+              <h4 className="text-[#444] font-bold text-xs uppercase tracking-widest mb-5">Cycles</h4>
               <ul className="space-y-2.5">
                 {['Mountain Bikes', 'Road Bikes', 'Kids Cycles', 'Gear Cycles'].map((item) => (
                   <li key={item}>
-                    <button
-                      onClick={() => scrollTo('cycles')}
-                      className="text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
-                    >
+                    <button onClick={() => scrollTo('cycles')}
+                      className="text-[#3a3a3a] hover:text-[#f97316] transition-colors text-sm">
                       {item}
                     </button>
                   </li>
@@ -90,19 +80,17 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-white font-bold text-sm mb-4">Quick Links</h4>
+              <h4 className="text-[#444] font-bold text-xs uppercase tracking-widest mb-5">Quick Links</h4>
               <ul className="space-y-2.5">
                 {[
                   { label: 'Rentals', id: 'rentals' },
                   { label: 'Gallery', id: 'gallery' },
                   { label: 'Contact Us', id: 'contact' },
-                  { label: 'Buyer\'s Guide', id: 'guide' },
+                  { label: "Buyer's Guide", id: 'guide' },
                 ].map((item) => (
                   <li key={item.label}>
-                    <button
-                      onClick={() => scrollTo(item.id)}
-                      className="text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
-                    >
+                    <button onClick={() => scrollTo(item.id)}
+                      className="text-[#3a3a3a] hover:text-[#f97316] transition-colors text-sm">
                       {item.label}
                     </button>
                   </li>
@@ -112,32 +100,25 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-              <h4 className="text-white font-bold text-sm mb-4">Contact</h4>
+              <h4 className="text-[#444] font-bold text-xs uppercase tracking-widest mb-5">Contact</h4>
               <ul className="space-y-3">
                 <li>
-                  <a
-                    href={PHONE_LINK}
-                    className="flex items-center gap-2 text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
-                  >
+                  <a href={PHONE_LINK} className="flex items-center gap-2 text-[#3a3a3a] hover:text-[#f97316] transition-colors text-sm">
                     <Phone className="w-3.5 h-3.5 flex-shrink-0" />
                     {SHOP.phone}
                   </a>
                 </li>
-                <li className="flex items-start gap-2 text-[#64748b] text-sm">
+                <li className="flex items-start gap-2 text-[#3a3a3a] text-sm">
                   <MapPin className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
                   Kumbakonam, Tamil Nadu
                 </li>
-                <li className="text-[#64748b] text-sm">9 AM – 9 PM daily</li>
+                <li className="text-[#3a3a3a] text-sm">9 AM – 9 PM daily</li>
                 <li>
-                  <a
-                    href={WA_GENERAL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <a href={WA_GENERAL} target="_blank" rel="noopener noreferrer"
                     data-testid="footer-whatsapp-btn"
-                    className="inline-flex items-center gap-1.5 bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold text-xs px-3 py-1.5 rounded-lg transition-colors mt-1"
+                    className="sku-btn-orange inline-flex items-center gap-1.5 text-white font-semibold text-xs px-3 py-1.5 rounded-lg mt-1"
                   >
-                    <MessageCircle className="w-3 h-3" />
-                    WhatsApp Us
+                    <MessageCircle className="w-3 h-3" /> WhatsApp Us
                   </a>
                 </li>
               </ul>
@@ -147,12 +128,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10 py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-[#475569] text-xs">
-            © 2025 Just Ride Cycles · In association with Delta Cycle
-          </p>
-          <p className="text-[#475569] text-xs">{SHOP.address}</p>
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="text-[#2a2a2a] text-xs">© 2025 Just Ride Cycles · In association with Delta Cycle</p>
+          <p className="text-[#2a2a2a] text-xs hidden sm:block">{SHOP.address}</p>
         </div>
       </div>
     </footer>

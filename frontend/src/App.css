@@ -11,80 +11,156 @@
 .spin-slow     { animation: spin-slow     12s linear infinite; }
 .spin-slow-rev { animation: spin-slow-rev 16s linear infinite; }
 
-/* ─── Hero gradient text — ORANGE ─── */
-.hero-gradient-text {
-  background: linear-gradient(135deg, #fb923c 0%, #f97316 40%, #fde68a 80%, #f97316 100%);
-  background-size: 200% 200%;
+/* ══════════════════════════════════════
+   SKEUOMORPHIC UTILITIES
+══════════════════════════════════════ */
+
+/* Carbon fiber weave */
+.carbon-bg {
+  background-color: #0e0e0e;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.013) 0,
+      rgba(255,255,255,0.013) 1px,
+      transparent 0,
+      transparent 50%
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255,255,255,0.013) 0,
+      rgba(255,255,255,0.013) 1px,
+      transparent 0,
+      transparent 50%
+    );
+  background-size: 5px 5px;
+}
+
+/* Chrome / metallic text */
+.chrome-text {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #e8e8e8 20%,
+    #b0b0b0 45%,
+    #e4e4e4 65%,
+    #a8a8a8 85%,
+    #d0d0d0 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradient-shift 4s ease-in-out infinite;
-}
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50%       { background-position: 100% 50%; }
 }
 
-/* ─── Accent underline ─── */
-.accent-line {
-  background: linear-gradient(to right, #f97316, #fb923c, #f97316);
-  background-size: 200%;
-  animation: shimmer-line 3s ease-in-out infinite;
-}
-@keyframes shimmer-line {
-  0%, 100% { background-position: 0% 50%; width: 5rem; }
-  50%       { background-position: 100% 50%; width: 8rem; }
-}
-
-/* ─── Hero badge ─── */
-.hero-badge {
-  border: 1px solid rgba(249, 115, 22, 0.45);
-  background: rgba(249, 115, 22, 0.09);
-  backdrop-filter: blur(10px);
-}
-@keyframes badge-shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position:  200% center; }
-}
-.badge-shimmer {
-  background: linear-gradient(90deg, transparent 0%, rgba(249, 115, 22, 0.14) 50%, transparent 100%);
-  background-size: 200% 100%;
-  animation: badge-shimmer 2.5s ease-in-out infinite;
+/* Glossy orange text with glow */
+.glossy-orange-text {
+  background: linear-gradient(
+    to bottom,
+    #fcd34d 0%,
+    #f97316 30%,
+    #dc5d0a 65%,
+    #fb923c 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 28px rgba(249,115,22,0.5));
 }
 
-/* ─── Buttons — orange glow ─── */
-.btn-glow {
-  box-shadow: 0 0 18px rgba(249, 115, 22, 0.45), 0 4px 14px rgba(249, 115, 22, 0.28);
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
-}
-.btn-glow:hover {
-  box-shadow: 0 0 32px rgba(249, 115, 22, 0.70), 0 8px 24px rgba(249, 115, 22, 0.38);
-}
-.glass-btn {
-  background: rgba(255, 255, 255, 0.08);
-  border: 2px solid rgba(255, 255, 255, 0.28);
-  backdrop-filter: blur(12px);
-  transition: background-color 0.25s ease, border-color 0.25s ease;
-}
-.glass-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.55);
+/* Metal badge / panel */
+.metal-badge {
+  background: linear-gradient(
+    to bottom,
+    #2e2e2e 0%,
+    #1a1a1a 50%,
+    #252525 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.11),
+    inset 0 -1px 0 rgba(0,0,0,0.3),
+    0 2px 8px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-top-color: rgba(255,255,255,0.13);
 }
 
-/* ─── WhatsApp pulse — keep WA brand green ─── */
+/* Dark glossy pill button */
+.sku-btn-dark {
+  background: linear-gradient(to bottom, #303030 0%, #111111 55%, #1e1e1e 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.14),
+    inset 0 -1px 0 rgba(0,0,0,0.5),
+    0 5px 16px rgba(0,0,0,0.65),
+    0 1px 3px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-top-color: rgba(255,255,255,0.11);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  transition: box-shadow 0.15s ease, transform 0.1s ease;
+}
+.sku-btn-dark:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    inset 0 -1px 0 rgba(0,0,0,0.5),
+    0 8px 24px rgba(0,0,0,0.75);
+}
+.sku-btn-dark:active {
+  box-shadow: inset 0 3px 7px rgba(0,0,0,0.6);
+  transform: translateY(1px);
+}
+
+/* Orange glossy pill button */
+.sku-btn-orange {
+  background: linear-gradient(to bottom, #fb923c 0%, #f97316 42%, #e85d09 80%, #f97316 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.32),
+    inset 0 -2px 0 rgba(0,0,0,0.22),
+    0 5px 18px rgba(249,115,22,0.55),
+    0 1px 4px rgba(0,0,0,0.35) !important;
+  border: 1px solid #b84000 !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  transition: box-shadow 0.15s ease, transform 0.1s ease;
+}
+.sku-btn-orange:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.32),
+    inset 0 -2px 0 rgba(0,0,0,0.22),
+    0 8px 28px rgba(249,115,22,0.7),
+    0 2px 6px rgba(0,0,0,0.4) !important;
+}
+.sku-btn-orange:active {
+  box-shadow: inset 0 3px 8px rgba(0,0,0,0.35) !important;
+  transform: translateY(1px);
+}
+
+/* Embossed dark card */
+.embossed-card {
+  background: linear-gradient(145deg, #1e1e1e 0%, #131313 100%);
+  box-shadow:
+    8px 8px 22px rgba(0,0,0,0.8),
+    -1px -1px 4px rgba(255,255,255,0.035),
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    inset 0 -1px 0 rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.065);
+  border-top-color: rgba(255,255,255,0.11);
+}
+
+/* Metal divider */
+.metal-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.14), transparent);
+}
+
+/* Glowing orange ring */
+.orange-glow-ring {
+  box-shadow: 0 0 0 1px rgba(249,115,22,0.3), 0 0 20px rgba(249,115,22,0.15);
+}
+
+/* ─── WhatsApp pulse (keep green — WA brand) ─── */
 @keyframes whatsapp-pulse {
   0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
   70%  { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
   100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 .whatsapp-pulse { animation: whatsapp-pulse 2.5s ease-in-out infinite; }
-
-/* ─── Scroll hint ─── */
-@keyframes scroll-bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(10px); }
-}
-.scroll-hint { animation: scroll-bounce 1.8s ease-in-out infinite; }
 
 /* ─── Fade Up ─── */
 @keyframes fadeUp {
@@ -127,10 +203,10 @@
 .cycle-card { transition: box-shadow 0.2s ease-out; transform-style: preserve-3d; }
 .cycle-card:hover { box-shadow: 0 28px 56px rgba(0,0,0,0.14); }
 
-/* ─── Image zoom ─── */
 .img-zoom { transition: transform 0.55s ease-out; }
 .img-zoom:hover { transform: scale(1.07); }
 
 /* ─── Global ─── */
-html { scroll-behavior: smooth; }
-.App { min-height: 100vh; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { overflow-x: hidden; background-color: #0e0e0e; }
+.App { min-height: 100vh; overflow-x: hidden; background-color: #0e0e0e; }

@@ -1,240 +1,248 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { ChevronDown, Star, MessageCircle, Phone, ArrowRight } from 'lucide-react';
-import { IMAGES, WA_GENERAL, PHONE_LINK } from '../data/constants';
+import React from 'react';
+import { ArrowRight, Star, Phone } from 'lucide-react';
+import { IMAGES, WA_BASE, PHONE_LINK, SHOP } from '../data/constants';
 
-const WORDS = ['Mountain Bike', 'Road Bike', 'Kids Cycle', 'Perfect Ride'];
+/* Decorative metal cross-spark */
+const Spark = ({ style }) => (
+  <svg viewBox="0 0 24 24" fill="none" style={style} className="absolute pointer-events-none" aria-hidden="true">
+    <path d="M12 2L12 22" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+    <path d="M2 12L22 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+  </svg>
+);
 
-function BicycleWheel({ className }) {
-  return (
-    <svg viewBox="0 0 200 200" className={className} aria-hidden="true">
-      <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray="8 5" />
-      <circle cx="100" cy="100" r="62" fill="none" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="100" cy="100" r="10" fill="none" stroke="currentColor" strokeWidth="2.5" />
-      <circle cx="100" cy="100" r="3.5" fill="currentColor" />
-      {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => {
-        const rad = (a * Math.PI) / 180;
-        return (
-          <line
-            key={a}
-            x1={100 + 11 * Math.cos(rad)} y1={100 + 11 * Math.sin(rad)}
-            x2={100 + 62 * Math.cos(rad)} y2={100 + 62 * Math.sin(rad)}
-            stroke="currentColor" strokeWidth="1.5"
-          />
-        );
-      })}
-    </svg>
-  );
-}
+const featuredWA = `${WA_BASE}?text=Hi!%20I'm%20interested%20in%20a%20Hercules%20Roadeo.%20Can%20you%20share%20details%3F`;
 
-const heroStats = [
-  { value: '4.9★', label: 'Google Rating' },
-  { value: '554+', label: 'Happy Customers' },
-  { value: '100+', label: 'Cycles in Stock' },
-  { value: '7 Days', label: 'Open Every Day' },
+const stats = [
+  { val: '4.9★', label: 'Google Rating' },
+  { val: '554+', label: 'Happy Customers' },
+  { val: '100+', label: 'In Stock' },
 ];
 
 export default function HeroSection() {
-  const [wordIdx, setWordIdx] = useState(3);
-  const [exiting, setExiting] = useState(false);
-  const [parallax, setParallax] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setExiting(true);
-      setTimeout(() => {
-        setWordIdx(i => (i + 1) % WORDS.length);
-        setExiting(false);
-      }, 280);
-    }, 2800);
-    return () => clearInterval(id);
-  }, []);
-
-  const handleMouseMove = useCallback((e) => {
-    const x = (e.clientX / window.innerWidth - 0.5) * 16;
-    const y = (e.clientY / window.innerHeight - 0.5) * 8;
-    setParallax({ x, y });
-  }, []);
-
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
-      onMouseMove={handleMouseMove}
-    >
-      {/* Background with mouse parallax */}
-      <div
-        className="absolute inset-0"
-        style={{
-          transform: `scale(1.1) translate(${parallax.x}px, ${parallax.y}px)`,
-          willChange: 'transform',
-          transition: 'transform 0.12s ease-out',
-        }}
-      >
-        <img
-          src={IMAGES.heroExterior}
-          alt="Just Ride Cycles Showroom"
-          className="hero-kenburns w-full h-full object-cover object-center"
-        />
-      </div>
+    <section id="hero" className="carbon-bg relative min-h-screen overflow-hidden" data-testid="hero-section">
 
-      {/* Multi-layer cinematic overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/92 via-black/55 to-black/15" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
-      {/* Subtle dot grid */}
+      {/* Metallic orange left-edge stripe */}
       <div
-        className="absolute inset-0 opacity-[0.035]"
-        style={{
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)',
-          backgroundSize: '36px 36px',
-        }}
+        className="absolute top-0 left-0 w-[5px] h-full z-10"
+        style={{ background: 'linear-gradient(to bottom, #fb923c, #f97316, #c04400, #f97316, #fb923c)' }}
       />
 
-      {/* Decorative spinning wheel — large, right background */}
+      {/* Orange ambient glow — left */}
       <div
-        className="absolute right-8 xl:right-20 top-1/2 -translate-y-1/2 pointer-events-none text-white opacity-[0.07] hidden lg:block"
-        style={{ width: 520, height: 520 }}
-      >
-        <BicycleWheel className="spin-slow w-full h-full" />
-      </div>
-      {/* Second smaller wheel, top-right */}
+        className="absolute top-0 left-0 w-48 h-full pointer-events-none"
+        style={{ background: 'linear-gradient(to right, rgba(249,115,22,0.06), transparent)' }}
+      />
+
+      {/* Subtle highlight stripe — top */}
       <div
-        className="absolute right-0 -top-20 pointer-events-none text-[#f97316] opacity-[0.06] hidden xl:block"
-        style={{ width: 280, height: 280 }}
-      >
-        <BicycleWheel className="spin-slow-rev w-full h-full" />
-      </div>
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{ background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.07), transparent)' }}
+      />
 
-      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-40 w-full">
-        <div className="max-w-2xl">
+      {/* Metal cross sparks */}
+      <Spark style={{ top: '23%', left: '39%', width: 22, height: 22, color: '#f97316', opacity: 0.7 }} />
+      <Spark style={{ top: '37%', right: '31%', width: 14, height: 14, color: '#888888', opacity: 0.5 }} />
+      <Spark style={{ bottom: '34%', left: '45%', width: 11, height: 11, color: '#f97316', opacity: 0.35 }} />
+      <Spark style={{ top: '56%', right: '19%', width: 18, height: 18, color: '#f97316', opacity: 0.3 }} />
+      <Spark style={{ top: '15%', right: '13%', width: 12, height: 12, color: '#555555', opacity: 0.35 }} />
 
-          {/* Animated badge */}
+      <div className="relative max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 w-full pt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 min-h-screen items-center">
+
+        {/* ─── LEFT: Content ─── */}
+        <div className="flex flex-col justify-center py-16 lg:py-0">
+
+          {/* Metal badge */}
           <div className="fade-up mb-8">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full hero-badge relative overflow-hidden">
-              <div className="badge-shimmer absolute inset-0 rounded-full" />
-              <Star className="w-3.5 h-3.5 text-[#f97316] fill-[#f97316] relative z-10" />
-              <span className="text-white text-xs font-bold uppercase tracking-[0.18em] relative z-10">
+            <div className="metal-badge inline-flex items-center gap-2.5 rounded-full px-5 py-2.5">
+              <div
+                className="w-2 h-2 rounded-full"
+                style={{
+                  background: 'radial-gradient(circle, #fb923c 0%, #f97316 60%)',
+                  boxShadow: '0 0 8px rgba(249,115,22,0.9), 0 0 16px rgba(249,115,22,0.4)',
+                }}
+              />
+              <span className="text-[#b0b0b0] text-xs font-bold tracking-widest uppercase">
                 Kumbakonam's #1 Cycle Shop
               </span>
             </div>
           </div>
 
-          {/* Headline */}
-          <div className="mb-4">
+          {/* MASSIVE skeuomorphic headline */}
+          <div className="fade-up fade-up-d1 mb-5 leading-none">
+            {/* Chrome metallic "JUST RIDE" */}
             <h1
-              className="fade-up fade-up-d1 text-6xl sm:text-7xl lg:text-[5.5rem] font-black text-white tracking-tighter leading-[0.95] mb-1"
-              style={{ fontFamily: 'Outfit, sans-serif' }}
+              className="chrome-text font-black leading-none tracking-tighter uppercase"
+              style={{
+                fontFamily: 'Outfit, sans-serif',
+                fontSize: 'clamp(3rem, 8.5vw, 7.8rem)',
+              }}
+              data-testid="hero-headline"
             >
-              Find Your
+              JUST RIDE
             </h1>
-            {/* Cycling word with gradient */}
-            <div className="relative h-[5.5rem] sm:h-[6.5rem] lg:h-[7rem] overflow-hidden">
-              <h1
-                className="text-6xl sm:text-7xl lg:text-[5.5rem] font-black tracking-tighter leading-[0.95] hero-gradient-text"
-                style={{
-                  fontFamily: 'Outfit, sans-serif',
-                  opacity: exiting ? 0 : 1,
-                  transform: exiting ? 'translateY(-24px)' : 'translateY(0)',
-                  transition: 'opacity 0.28s ease, transform 0.28s ease',
-                }}
-              >
-                {WORDS[wordIdx]}
-              </h1>
-            </div>
-            {/* Animated green accent line */}
-            <div className="fade-up-d2 accent-line mt-1 h-[3px] w-20 rounded-full" />
+
+            {/* Glossy orange "CYCLES" */}
+            <h1
+              className="glossy-orange-text font-black leading-none tracking-tighter uppercase"
+              style={{
+                fontFamily: 'Outfit, sans-serif',
+                fontSize: 'clamp(3.5rem, 10vw, 9.2rem)',
+              }}
+            >
+              CYCLES
+            </h1>
           </div>
+
+          {/* Metal divider accent */}
+          <div
+            className="fade-up fade-up-d1 mb-6 h-[2px] w-20 rounded-full"
+            style={{ background: 'linear-gradient(to right, #f97316, rgba(249,115,22,0.3), transparent)' }}
+          />
 
           {/* Subtext */}
-          <p className="fade-up fade-up-d2 text-white/70 text-lg sm:text-xl max-w-lg mb-6 leading-relaxed">
-            Buy, rent, or explore — 100+ cycles on display in our showroom
+          <p className="fade-up fade-up-d2 text-[#707070] text-sm sm:text-base max-w-xs leading-relaxed mb-8">
+            Experience the perfect blend of quality, durability and expert guidance — cycles built for every rider.
           </p>
 
-          {/* Stars */}
-          <div className="fade-up fade-up-d2 flex items-center gap-2.5 mb-10">
-            <div className="flex gap-0.5">
-              {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />)}
-            </div>
-            <span className="text-white/85 font-semibold text-sm">4.9★ · 554 Google Reviews</span>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="fade-up fade-up-d3 flex flex-col sm:flex-row gap-4 mb-12">
+          {/* Skeuomorphic Buttons */}
+          <div className="fade-up fade-up-d3 flex flex-wrap gap-3 mb-12">
             <button
               data-testid="hero-view-cycles-btn"
               onClick={() => scrollTo('cycles')}
-              className="btn-glow group flex items-center justify-center gap-2.5 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-base px-8 py-4 rounded-xl transition-colors"
+              className="sku-btn-dark group inline-flex items-center gap-2.5 text-white font-bold text-sm px-8 py-4 rounded-full"
             >
-              View Cycles
+              SEE ALL CYCLES
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               data-testid="hero-rent-btn"
               onClick={() => scrollTo('rentals')}
-              className="glass-btn flex items-center justify-center gap-2 text-white font-bold text-base px-8 py-4 rounded-xl"
+              className="sku-btn-orange inline-flex items-center gap-2 text-white font-bold text-sm px-8 py-4 rounded-full"
             >
-              Rent Now
+              RENT A BIKE
             </button>
           </div>
 
-          {/* Quick links */}
-          <div className="fade-up fade-up-d4 flex flex-wrap items-center gap-6">
-            <a
-              href={WA_GENERAL} target="_blank" rel="noopener noreferrer"
-              data-testid="hero-whatsapp-btn"
-              className="flex items-center gap-2 text-white/55 hover:text-[#f97316] text-sm transition-colors group"
-            >
-              <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              WhatsApp Us
-            </a>
-            <a
-              href={PHONE_LINK}
-              data-testid="hero-call-btn"
-              className="flex items-center gap-2 text-white/55 hover:text-white text-sm transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              Call Now
-            </a>
-            <span className="text-white/30 text-sm hidden sm:block">9 AM – 9 PM · 7 days</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Glassmorphism bottom stats bar */}
-      <div className="absolute bottom-5 left-0 right-0 z-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div
-            className="rounded-2xl px-6 py-4 grid grid-cols-2 sm:grid-cols-4 gap-4"
-            style={{
-              background: 'rgba(255,255,255,0.07)',
-              backdropFilter: 'blur(20px)',
-              border: '1px solid rgba(255,255,255,0.13)',
-            }}
-          >
-            {heroStats.map((s, i) => (
-              <div key={i} className={`text-center ${i > 0 ? 'border-l border-white/10' : ''}`}>
-                <div className="text-white text-xl font-black" style={{ fontFamily: 'Outfit, sans-serif' }}>
-                  {s.value}
+          {/* Stats — chrome numbers */}
+          <div className="fade-up fade-up-d4 flex items-center gap-6 sm:gap-8">
+            {stats.map((s, i) => (
+              <React.Fragment key={i}>
+                {i > 0 && (
+                  <div
+                    className="w-px h-10"
+                    style={{ background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.12), transparent)' }}
+                  />
+                )}
+                <div>
+                  <div
+                    className="chrome-text text-xl font-black leading-none"
+                    style={{ fontFamily: 'Outfit, sans-serif' }}
+                  >
+                    {s.val}
+                  </div>
+                  <div className="text-[#555] text-xs mt-1">{s.label}</div>
                 </div>
-                <div className="text-white/45 text-xs font-medium mt-0.5">{s.label}</div>
-              </div>
+              </React.Fragment>
             ))}
           </div>
         </div>
+
+        {/* ─── RIGHT: Bike Image ─── */}
+        <div className="relative flex items-center justify-center min-h-[420px] lg:min-h-screen py-8 lg:py-0">
+
+          {/* Orange halo behind bike */}
+          <div
+            className="absolute rounded-full pointer-events-none"
+            style={{
+              width: '75%',
+              height: '65%',
+              background: 'radial-gradient(circle, rgba(249,115,22,0.07) 0%, transparent 68%)',
+            }}
+          />
+
+          {/* Main cycle image */}
+          <img
+            src={IMAGES.mtbStudio}
+            alt="Premium Cycle — Just Ride Cycles"
+            data-testid="hero-bike-img"
+            className="relative z-10 w-full max-w-md lg:max-w-2xl object-contain select-none"
+            style={{
+              filter:
+                'drop-shadow(0 30px 60px rgba(0,0,0,0.9)) drop-shadow(0 0 40px rgba(249,115,22,0.12))',
+            }}
+          />
+
+          {/* Embossed floating product card */}
+          <div
+            data-testid="hero-float-card"
+            className="embossed-card absolute bottom-10 lg:bottom-16 right-0 sm:right-2 rounded-2xl p-5 z-20"
+            style={{ minWidth: 200 }}
+          >
+            <p
+              className="chrome-text font-bold text-sm mb-1 leading-tight"
+              style={{ fontFamily: 'Outfit, sans-serif' }}
+            >
+              Hercules Roadeo A50
+            </p>
+            <p className="text-[#555] text-xs mb-2">Mountain Bike</p>
+            <div className="flex items-center gap-1 mb-4">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star key={i} className="w-3 h-3 text-amber-400 fill-amber-400" />
+              ))}
+              <span className="text-[#555] text-xs ml-1">554 reviews</span>
+            </div>
+            <div className="metal-divider mb-4" />
+            <a
+              href={featuredWA}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="hero-enquire-btn"
+              className="sku-btn-orange w-full flex items-center justify-between text-white text-xs font-bold px-4 py-2.5 rounded-xl"
+            >
+              Enquire Now
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+
+          {/* Embossed phone panel — top right */}
+          <div
+            className="embossed-card absolute top-12 lg:top-24 right-0 sm:right-2 rounded-xl px-4 py-3 flex items-center gap-3 z-20"
+          >
+            <div
+              className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+              style={{
+                background: 'linear-gradient(145deg, #2a1200, #1a0c00)',
+                boxShadow: 'inset 0 1px 0 rgba(249,115,22,0.25), 0 0 8px rgba(249,115,22,0.2)',
+                border: '1px solid rgba(249,115,22,0.2)',
+              }}
+            >
+              <Phone className="w-4 h-4 text-[#f97316]" />
+            </div>
+            <div>
+              <div className="text-[#777] text-[10px] font-semibold uppercase tracking-wider">Call Us Now</div>
+              <a
+                href={PHONE_LINK}
+                data-testid="hero-call-card-btn"
+                className="text-[#f97316] text-xs font-bold hover:text-[#fb923c] transition-colors"
+              >
+                {SHOP.phone}
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Scroll hint */}
-      <button
-        data-testid="hero-scroll-hint"
-        onClick={() => scrollTo('trust-bar')}
-        className="absolute bottom-[115px] sm:bottom-28 left-1/2 z-10 flex flex-col items-center gap-1 text-white/35 hover:text-white/60 transition-colors"
-        style={{ transform: 'translateX(-50%)' }}
-        aria-label="Scroll down"
-      >
-        <ChevronDown className="w-5 h-5 animate-bounce" />
-      </button>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 z-10">
+        <div
+          className="w-px h-10"
+          style={{ background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.2), transparent)' }}
+        />
+        <span className="text-[#444] text-[10px] tracking-[0.2em] uppercase font-medium">Scroll</span>
+      </div>
     </section>
   );
 }

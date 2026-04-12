@@ -1,34 +1,104 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Ken Burns Hero Animation */
+@keyframes kenburns {
+  0%   { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-2%, -1%); }
+}
+.hero-kenburns {
+  animation: kenburns 10s ease-out forwards;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* WhatsApp Pulse */
+@keyframes whatsapp-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70%  { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-pulse {
+  animation: whatsapp-pulse 2.5s ease-in-out infinite;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Scroll Hint Bounce */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(10px); }
+}
+.scroll-hint {
+  animation: scroll-bounce 1.8s ease-in-out infinite;
 }
 
-.App-link {
-    color: #61dafb;
+/* Fade Up Entrance */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out forwards;
+}
+.fade-up-d1 { animation-delay: 0.1s; }
+.fade-up-d2 { animation-delay: 0.25s; }
+.fade-up-d3 { animation-delay: 0.4s; }
+.fade-up-d4 { animation-delay: 0.55s; }
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+.reveal-d4 { transition-delay: 0.4s; }
+
+/* Category card hover */
+.cat-card {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.cat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.cat-card:active {
+  transform: scale(0.98);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Cycle card tilt */
+.cycle-card {
+  transition: box-shadow 0.2s ease-out;
+  transform-style: preserve-3d;
+}
+.cycle-card:hover {
+  box-shadow: 0 24px 48px rgba(0,0,0,0.14);
+}
+
+/* Image zoom on hover */
+.img-zoom {
+  transition: transform 0.5s ease-out;
+}
+.img-zoom:hover {
+  transform: scale(1.06);
+}
+
+/* Step card number animation */
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.step-num.visible {
+  animation: countUp 0.5s ease-out forwards;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Override App default */
+.App {
+  min-height: 100vh;
 }

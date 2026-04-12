@@ -19,7 +19,7 @@ function useCountUp(end, duration, start) {
 
 const statDefs = [
   { icon: Star, label: 'Google Rating', color: '#f59e0b', isStatic: true, staticVal: '4.9★' },
-  { icon: Users, label: 'Happy Customers', color: '#22c55e', end: 554, suffix: '+' },
+  { icon: Users, label: 'Happy Customers', color: '#f97316', end: 554, suffix: '+' },
   { icon: Package, label: 'Cycles in Stock', color: '#3b82f6', end: 100, suffix: '+' },
   { icon: ShieldCheck, label: 'Trusted Shop', color: '#a855f7', isStatic: true, staticVal: 'Since 2018' },
 ];

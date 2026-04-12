@@ -4,7 +4,7 @@ import { WA_RENTAL, IMAGES } from '../data/constants';
 import useReveal from '../hooks/useReveal';
 
 const rentalTypes = [
-  { icon: Clock, type: 'Hourly', note: 'Short city rides', color: '#22c55e' },
+  { icon: Clock, type: 'Hourly', note: 'Short city rides', color: '#f97316' },
   { icon: Calendar, type: 'Daily', note: 'Full day adventures', color: '#3b82f6' },
   { icon: CalendarDays, type: 'Weekly', note: 'Extended trips', color: '#a855f7' },
 ];
@@ -38,7 +38,7 @@ export default function RentalsSection() {
         >
           {/* Header */}
           <div className="max-w-2xl mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#22c55e]">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#f97316]">
               Flexible Rentals
             </span>
             <h2
@@ -60,7 +60,7 @@ export default function RentalsSection() {
                 <div
                   key={i}
                   data-testid={`rental-type-${r.type.toLowerCase()}`}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#22c55e]/50 transition-colors group"
+                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#f97316]/50 transition-colors group"
                 >
                   <div
                     className="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
@@ -86,7 +86,7 @@ export default function RentalsSection() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {steps.map((step, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="w-7 h-7 bg-[#22c55e] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-7 h-7 bg-[#f97316] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-xs font-black">{i + 1}</span>
                   </div>
                   <span className="text-white/80 text-sm font-medium leading-snug">{step}</span>
@@ -101,7 +101,7 @@ export default function RentalsSection() {
             target="_blank"
             rel="noopener noreferrer"
             data-testid="rental-whatsapp-btn"
-            className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-green-500/20"
+            className="inline-flex items-center gap-2.5 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-green-500/20"
           >
             <MessageCircle className="w-5 h-5" />
             Book a Rental on WhatsApp

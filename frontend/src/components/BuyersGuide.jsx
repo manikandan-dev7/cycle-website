@@ -8,7 +8,7 @@ const steps = [
     number: '01',
     title: 'Choose by Height',
     body: 'Cycle frame size should match your height. We\'ll help you size it perfectly in-store.',
-    color: '#22c55e',
+    color: '#f97316',
   },
   {
     number: '02',
@@ -69,7 +69,7 @@ export default function BuyersGuide() {
           ref={titleRef}
           className={`text-center mb-14 reveal ${titleVisible ? 'visible' : ''}`}
         >
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#22c55e]">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#f97316]">
             Buyer's Guide
           </span>
           <h2
@@ -95,7 +95,7 @@ export default function BuyersGuide() {
             target="_blank"
             rel="noopener noreferrer"
             data-testid="guide-whatsapp-btn"
-            className="inline-flex items-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold text-base px-8 py-4 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2.5 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-base px-8 py-4 rounded-xl transition-colors"
           >
             <MessageCircle className="w-5 h-5" />
             Ask Our Experts on WhatsApp

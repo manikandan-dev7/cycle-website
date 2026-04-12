@@ -80,7 +80,7 @@ function CycleCard({ cycle, delay }) {
             target="_blank"
             rel="noopener noreferrer"
             data-testid={`enquire-btn-${cycle.id}`}
-            className="mt-auto w-full flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold text-sm py-3 rounded-xl transition-colors"
+            className="mt-auto w-full flex items-center justify-center gap-2 bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold text-sm py-3 rounded-xl transition-colors"
           >
             <MessageCircle className="w-4 h-4" />
             Enquire on WhatsApp
@@ -101,7 +101,7 @@ export default function CycleShowcase() {
           ref={titleRef}
           className={`text-center mb-14 reveal ${titleVisible ? 'visible' : ''}`}
         >
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#22c55e]">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#f97316]">
             Our Collection
           </span>
           <h2

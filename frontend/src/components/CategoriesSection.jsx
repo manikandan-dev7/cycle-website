@@ -58,7 +58,7 @@ export default function CategoriesSection() {
           ref={titleRef}
           className={`text-center mb-14 reveal ${titleVisible ? 'visible' : ''}`}
         >
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#22c55e]">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#f97316]">
             What are you looking for?
           </span>
           <h2

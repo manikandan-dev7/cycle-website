@@ -21,7 +21,7 @@ export const WA_EXPERT = `${WA_BASE}?text=Hi%2C%20I%20need%20help%20choosing%20t
 export const PHONE_LINK = `tel:+91${SHOP.phone.replace(/\s/g, '').slice(1)}`;
 
 export const IMAGES = {
-  heroExterior: "https://customer-assets.emergentagent.com/job_dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/artifacts/0h1yekyl_Screenshot%202026-04-12%20211607.png",
+  heroExterior: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85",
   cycleRows: "https://customer-assets.emergentagent.com/job_dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/artifacts/477o79wp_Screenshot%202026-04-12%20211621.png",
   interiorWide: "https://customer-assets.emergentagent.com/job_dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/artifacts/mw89gwgn_Screenshot%202026-04-12%20211628.png",
   interior2: "https://customer-assets.emergentagent.com/job_dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/artifacts/e034zdrj_Screenshot%202026-04-12%20211643.png",
@@ -47,7 +47,7 @@ export const CYCLES = [
     specs: ["21 Speed", "Alloy Frame", "V-Brakes"],
     brand: "Hercules",
     image: IMAGES.mtbStudio,
-    badgeColor: "#16a34a",
+    badgeColor: "#ea580c",
   },
   {
     id: 2,
@@ -97,7 +97,7 @@ export const CYCLES = [
     specs: ["21 Speed", "Front Suspension", "Trail"],
     brand: "Hercules",
     image: IMAGES.yellowMTB,
-    badgeColor: "#16a34a",
+    badgeColor: "#ea580c",
   },
 ];
 
@@ -106,7 +106,7 @@ export const CATEGORIES = [
     name: "Mountain Bikes",
     desc: "Trail ready, built tough",
     image: IMAGES.mtbStudio,
-    accentColor: "#16a34a",
+    accentColor: "#ea580c",
   },
   {
     name: "Road Bikes",

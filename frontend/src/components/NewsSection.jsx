@@ -13,7 +13,7 @@ export default function NewsSection() {
           ref={ref}
           className={`reveal ${visible ? 'visible' : ''}`}
         >
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#22c55e]">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#f97316]">
             What's New
           </span>
           <h2
@@ -23,12 +23,12 @@ export default function NewsSection() {
             Latest Updates
           </h2>
 
-          <div className="border-l-4 border-[#22c55e] bg-white rounded-r-2xl p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 max-w-2xl">
+          <div className="border-l-4 border-[#f97316] bg-white rounded-r-2xl p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 max-w-2xl">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <div className="flex items-center gap-1.5 bg-[#22c55e]/10 px-2.5 py-1 rounded-full">
-                  <Zap className="w-3 h-3 text-[#22c55e]" />
-                  <span className="text-[#16a34a] text-xs font-bold uppercase tracking-wider">New Arrival</span>
+                <div className="flex items-center gap-1.5 bg-[#f97316]/10 px-2.5 py-1 rounded-full">
+                  <Zap className="w-3 h-3 text-[#f97316]" />
+                  <span className="text-[#ea580c] text-xs font-bold uppercase tracking-wider">New Arrival</span>
                 </div>
                 <span className="text-[#94a3b8] text-xs">2025</span>
               </div>
@@ -47,7 +47,7 @@ export default function NewsSection() {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="news-enquire-btn"
-              className="flex-shrink-0 inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
+              className="flex-shrink-0 inline-flex items-center gap-2 bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
             >
               Check Availability
               <ArrowRight className="w-4 h-4" />

@@ -5,7 +5,6 @@ import HeroSection from './components/HeroSection';
 import TrustBar from './components/TrustBar';
 import BrandsMarquee from './components/BrandsMarquee';
 import ShowroomSection from './components/ShowroomSection';
-import ScrollAnimationSection from './components/ScrollAnimationSection';
 import CategoriesSection from './components/CategoriesSection';
 import CycleShowcase from './components/CycleShowcase';
 import RentalsSection from './components/RentalsSection';
@@ -27,7 +26,6 @@ function App() {
         <TrustBar />
         <BrandsMarquee />
         <ShowroomSection />
-        <ScrollAnimationSection />
         <CategoriesSection />
         <CycleShowcase />
         <RentalsSection />

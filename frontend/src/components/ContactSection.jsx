@@ -13,7 +13,7 @@ export default function ContactSection() {
           ref={ref}
           className={`text-center mb-14 reveal ${visible ? 'visible' : ''}`}
         >
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#22c55e]">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#f97316]">
             Visit Us
           </span>
           <h2
@@ -51,8 +51,8 @@ export default function ContactSection() {
 
             <div className="space-y-5 mb-8">
               <div className="flex items-start gap-3.5">
-                <div className="w-9 h-9 bg-[#22c55e]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <MapPin className="w-4 h-4 text-[#22c55e]" />
+                <div className="w-9 h-9 bg-[#f97316]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <MapPin className="w-4 h-4 text-[#f97316]" />
                 </div>
                 <div>
                   <div className="text-[#111111] font-semibold text-sm mb-0.5">Address</div>
@@ -61,20 +61,20 @@ export default function ContactSection() {
               </div>
 
               <div className="flex items-center gap-3.5">
-                <div className="w-9 h-9 bg-[#22c55e]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-4 h-4 text-[#22c55e]" />
+                <div className="w-9 h-9 bg-[#f97316]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-4 h-4 text-[#f97316]" />
                 </div>
                 <div>
                   <div className="text-[#111111] font-semibold text-sm mb-0.5">Phone</div>
-                  <a href={PHONE_LINK} className="text-[#64748b] text-sm hover:text-[#22c55e] transition-colors">
+                  <a href={PHONE_LINK} className="text-[#64748b] text-sm hover:text-[#f97316] transition-colors">
                     {SHOP.phone}
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-3.5">
-                <div className="w-9 h-9 bg-[#22c55e]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-4 h-4 text-[#22c55e]" />
+                <div className="w-9 h-9 bg-[#f97316]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-4 h-4 text-[#f97316]" />
                 </div>
                 <div>
                   <div className="text-[#111111] font-semibold text-sm mb-0.5">Hours</div>
@@ -89,7 +89,7 @@ export default function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="contact-whatsapp-btn"
-                className="w-full flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold py-3.5 rounded-xl transition-colors"
+                className="w-full flex items-center justify-center gap-2.5 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold py-3.5 rounded-xl transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
                 Chat on WhatsApp

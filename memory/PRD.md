@@ -53,7 +53,14 @@ Premium, conversion-focused digital showroom for Just Ride Cycles, Kumbakonam's 
 
 ## What's Been Implemented
 
-### Version 1.1 – Premium Upgrade (April 2026)
+### Version 1.2 – Black & Orange Rebrand + Gap Fix (April 2026)
+- [x] Removed ScrollAnimationSection (was causing 280vh white gap)
+- [x] Hero image changed to dramatic cycling action photo (Unsplash)
+- [x] Complete color rebrand: green (#22c55e) → orange (#f97316) across all 14 components
+- [x] Dark accent: #16a34a → #ea580c (darker orange) in all files
+- [x] Orange gradient text for cycling headline
+- [x] Orange glow on CTA button, orange badge shimmer, orange cursor glow
+- [x] WhatsApp buttons kept as green (#25d366) — WA brand color preserved
 - [x] **Hero redesign:** Gradient cycling text (Mountain Bike/Road Bike/Kids Cycle/Perfect Ride animates every 2.8s)
 - [x] **Mouse parallax:** Hero background image moves subtly with cursor position
 - [x] **Decorative spinning bicycle wheels:** Two semi-transparent SVG wheels in hero background (12s rotation)

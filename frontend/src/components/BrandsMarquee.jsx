@@ -13,7 +13,7 @@ export default function BrandsMarquee() {
               <span className="text-white/20 text-xs font-black uppercase tracking-[0.3em] hover:text-white/50 transition-colors cursor-default">
                 {brand}
               </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] opacity-60 flex-shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#f97316] opacity-60 flex-shrink-0" />
             </React.Fragment>
           ))}
         </div>

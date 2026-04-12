@@ -17,7 +17,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="social-instagram"
-              className="flex items-center gap-2 text-[#64748b] hover:text-[#22c55e] transition-colors text-sm"
+              className="flex items-center gap-2 text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
             >
               <Instagram className="w-4 h-4" />
               @justridecycles
@@ -28,7 +28,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="social-facebook"
-              className="flex items-center gap-2 text-[#64748b] hover:text-[#22c55e] transition-colors text-sm"
+              className="flex items-center gap-2 text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
             >
               <Facebook className="w-4 h-4" />
               Just Ride Cycles
@@ -39,7 +39,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="social-whatsapp"
-              className="flex items-center gap-2 text-[#64748b] hover:text-[#22c55e] transition-colors text-sm"
+              className="flex items-center gap-2 text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
             >
               <MessageCircle className="w-4 h-4" />
               WhatsApp
@@ -79,7 +79,7 @@ export default function Footer() {
                   <li key={item}>
                     <button
                       onClick={() => scrollTo('cycles')}
-                      className="text-[#64748b] hover:text-[#22c55e] transition-colors text-sm"
+                      className="text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
                     >
                       {item}
                     </button>
@@ -101,7 +101,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <button
                       onClick={() => scrollTo(item.id)}
-                      className="text-[#64748b] hover:text-[#22c55e] transition-colors text-sm"
+                      className="text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
                     >
                       {item.label}
                     </button>
@@ -117,7 +117,7 @@ export default function Footer() {
                 <li>
                   <a
                     href={PHONE_LINK}
-                    className="flex items-center gap-2 text-[#64748b] hover:text-[#22c55e] transition-colors text-sm"
+                    className="flex items-center gap-2 text-[#64748b] hover:text-[#f97316] transition-colors text-sm"
                   >
                     <Phone className="w-3.5 h-3.5 flex-shrink-0" />
                     {SHOP.phone}
@@ -134,7 +134,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-testid="footer-whatsapp-btn"
-                    className="inline-flex items-center gap-1.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold text-xs px-3 py-1.5 rounded-lg transition-colors mt-1"
+                    className="inline-flex items-center gap-1.5 bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold text-xs px-3 py-1.5 rounded-lg transition-colors mt-1"
                   >
                     <MessageCircle className="w-3 h-3" />
                     WhatsApp Us

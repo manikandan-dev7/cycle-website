@@ -58,13 +58,13 @@ export default function ShowroomSection() {
             ref={textRef}
             className={`reveal ${textVisible ? 'visible' : ''}`}
           >
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#22c55e]">Our Showroom</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#f97316]">Our Showroom</span>
             <h2
               className="text-4xl sm:text-5xl font-black text-[#111111] tracking-tight mt-3 mb-6 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif' }}
             >
               Step Inside<br />
-              <span className="text-[#22c55e]">Just Ride</span>
+              <span className="text-[#f97316]">Just Ride</span>
             </h2>
             <p className="text-[#64748b] text-base leading-relaxed mb-8">
               Over 100 cycles on display across every category — from kids' first bikes to
@@ -76,8 +76,8 @@ export default function ShowroomSection() {
                 const Icon = d.icon;
                 return (
                   <li key={i} className="flex items-center gap-3">
-                    <div className="w-9 h-9 bg-[#22c55e]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-4 h-4 text-[#22c55e]" />
+                    <div className="w-9 h-9 bg-[#f97316]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-4 h-4 text-[#f97316]" />
                     </div>
                     <span className="text-[#374151] font-medium text-sm">{d.text}</span>
                   </li>

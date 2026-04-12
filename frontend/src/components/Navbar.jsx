@@ -63,7 +63,7 @@ export default function Navbar() {
                   key={link.label}
                   data-testid={`nav-link-${link.label.toLowerCase()}`}
                   onClick={() => scrollTo(link.id)}
-                  className={`text-sm font-medium transition-colors hover:text-[#22c55e] ${
+                  className={`text-sm font-medium transition-colors hover:text-[#f97316] ${
                     scrolled ? 'text-[#64748b]' : 'text-white/80'
                   }`}
                 >
@@ -78,7 +78,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="navbar-whatsapp-btn"
-                className="flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
+                className="flex items-center gap-2 bg-[#f97316] hover:bg-[#ea580c] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp Us
@@ -117,7 +117,7 @@ export default function Navbar() {
             key={link.label}
             data-testid={`mobile-nav-${link.label.toLowerCase()}`}
             onClick={() => scrollTo(link.id)}
-            className="text-white text-3xl font-bold hover:text-[#22c55e] transition-colors"
+            className="text-white text-3xl font-bold hover:text-[#f97316] transition-colors"
             style={{ fontFamily: 'Outfit, sans-serif' }}
           >
             {link.label}
@@ -129,7 +129,7 @@ export default function Navbar() {
           rel="noopener noreferrer"
           data-testid="mobile-whatsapp-btn"
           onClick={() => setMenuOpen(false)}
-          className="flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white text-lg font-bold px-10 py-4 rounded-xl transition-colors mt-4"
+          className="flex items-center gap-2 bg-[#f97316] hover:bg-[#ea580c] text-white text-lg font-bold px-10 py-4 rounded-xl transition-colors mt-4"
         >
           <MessageCircle className="w-5 h-5" />
           WhatsApp Us

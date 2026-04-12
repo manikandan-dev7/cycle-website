@@ -100,7 +100,7 @@ export default function HeroSection() {
       </div>
       {/* Second smaller wheel, top-right */}
       <div
-        className="absolute right-0 -top-20 pointer-events-none text-[#22c55e] opacity-[0.06] hidden xl:block"
+        className="absolute right-0 -top-20 pointer-events-none text-[#f97316] opacity-[0.06] hidden xl:block"
         style={{ width: 280, height: 280 }}
       >
         <BicycleWheel className="spin-slow-rev w-full h-full" />
@@ -114,7 +114,7 @@ export default function HeroSection() {
           <div className="fade-up mb-8">
             <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full hero-badge relative overflow-hidden">
               <div className="badge-shimmer absolute inset-0 rounded-full" />
-              <Star className="w-3.5 h-3.5 text-[#22c55e] fill-[#22c55e] relative z-10" />
+              <Star className="w-3.5 h-3.5 text-[#f97316] fill-[#f97316] relative z-10" />
               <span className="text-white text-xs font-bold uppercase tracking-[0.18em] relative z-10">
                 Kumbakonam's #1 Cycle Shop
               </span>
@@ -165,7 +165,7 @@ export default function HeroSection() {
             <button
               data-testid="hero-view-cycles-btn"
               onClick={() => scrollTo('cycles')}
-              className="btn-glow group flex items-center justify-center gap-2.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold text-base px-8 py-4 rounded-xl transition-colors"
+              className="btn-glow group flex items-center justify-center gap-2.5 bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-base px-8 py-4 rounded-xl transition-colors"
             >
               View Cycles
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -184,7 +184,7 @@ export default function HeroSection() {
             <a
               href={WA_GENERAL} target="_blank" rel="noopener noreferrer"
               data-testid="hero-whatsapp-btn"
-              className="flex items-center gap-2 text-white/55 hover:text-[#22c55e] text-sm transition-colors group"
+              className="flex items-center gap-2 text-white/55 hover:text-[#f97316] text-sm transition-colors group"
             >
               <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
               WhatsApp Us

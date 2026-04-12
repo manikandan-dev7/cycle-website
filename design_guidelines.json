@@ -49,19 +49,19 @@
   },
   "media_assets": {
     "hero": {
-      "url": "https://static.prod-images.emergentagent.com/jobs/dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/images/82911468586455801c4169aee94cf815779296c51bf71c6da9a749dcce91acb5.png",
+      "url": "https://images.unsplash.com/photo-1503914068268-5413b35b45ad?auto=format&fit=crop&w=1600&q=80",
       "description": "Wide-angle photograph of a premium, modern bicycle showroom interior"
     },
     "parallax_detail": {
-      "url": "https://static.prod-images.emergentagent.com/jobs/dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/images/3fd37694257cd7387db141ec5b1e21ac6315d2f4a4f63c9bb168c1b5fb6d6daf.png",
+      "url": "https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1200&q=80",
       "description": "Macro photography of a premium bicycle gear cassette"
     },
     "mtb_studio": {
-      "url": "https://static.prod-images.emergentagent.com/jobs/dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/images/32098a145c89d9f3aa503204a5592b52b5b13e9bd9d486f826fb8bd98619f9ca.png",
+      "url": "https://images.unsplash.com/photo-1518655048521-f130df041f66?auto=format&fit=crop&w=1600&q=80",
       "description": "Studio product photography of a premium mountain bike"
     },
     "city_bike_studio": {
-      "url": "https://static.prod-images.emergentagent.com/jobs/dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/images/513896fa78c5fff0d21d011c9a7d882f01fd5058574f2ebccc48232ac8947cda.png",
+      "url": "https://images.unsplash.com/photo-1518032922675-c8ac8b3e0eda?auto=format&fit=crop&w=1600&q=80",
       "description": "Studio product photography of a modern urban city commuter bicycle"
     },
     "kids_bike": {

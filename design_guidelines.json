@@ -1,0 +1,151 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) blended with Archetype 1 (Organic & Earthy)",
+  "design_philosophy": "Apple Store-inspired premium retail layout. Focus on generous negative space, brushed metal or matte glass equivalents via CSS (glassmorphism), high contrast typography, and frictionless conversion paths via WhatsApp. Every element breathes; avoiding clutter.",
+  "colors": {
+    "primary": "#111111",
+    "primary_foreground": "#ffffff",
+    "secondary": "#ffffff",
+    "secondary_foreground": "#111111",
+    "accent": "#22c55e",
+    "accent_foreground": "#ffffff",
+    "accent_dark": "#16a34a",
+    "background": "#f8fafc",
+    "surface": "#ffffff",
+    "muted": "#f1f5f9",
+    "muted_foreground": "#64748b",
+    "border": "#e2e8f0"
+  },
+  "typography": {
+    "heading_font": "Cabinet Grotesk, sans-serif",
+    "body_font": "Satoshi, Inter, sans-serif",
+    "rules": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none",
+      "h2": "text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-semibold tracking-tight",
+      "body": "text-base md:text-lg text-muted-foreground leading-relaxed",
+      "labels": "text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
+    }
+  },
+  "spacing_and_layout": {
+    "general": "Generous spacing. Sections should use py-24 or py-32. Containers max-w-7xl mx-auto px-6 lg:px-8.",
+    "cards": "Padding p-6 or p-8 inside cards. Border radius 12px (rounded-xl).",
+    "buttons": "Border radius 8px (rounded-lg). Height 48px or 56px for main CTAs.",
+    "inputs": "Border radius 4px (rounded).",
+    "shadows": "soft layered shadows (shadow-sm to shadow-lg, no hard offsets).",
+    "grid": "Use bento grid principles for categories. Asymmetrical spans to create tension."
+  },
+  "surface_strategies": {
+    "nav": "Crystal Glass: backdrop-blur-xl bg-white/70, 1px bottom border border-border/40. z-50 sticky top.",
+    "cards": "Flat solid #ffffff background, border border-border, shadow-sm hover:shadow-md transition-all duration-300.",
+    "rentals_section": "Dark mode inversion: bg-[#111111] text-[#ffffff].",
+    "buttons": "Accent buttons MUST be bg-[#22c55e] hover:bg-[#16a34a] text-white."
+  },
+  "animations": {
+    "hero": "Ken Burns effect on the background image (scale from 1 to 1.05 over 10 seconds).",
+    "showroom": "Scroll-triggered parallax for the split section image.",
+    "features": "Horizontal scroll container for 'Why Choose Us'.",
+    "interactions": "All interactive elements must have hover:-translate-y-1 transition-transform."
+  },
+  "media_assets": {
+    "hero": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/images/82911468586455801c4169aee94cf815779296c51bf71c6da9a749dcce91acb5.png",
+      "description": "Wide-angle photograph of a premium, modern bicycle showroom interior"
+    },
+    "parallax_detail": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/images/3fd37694257cd7387db141ec5b1e21ac6315d2f4a4f63c9bb168c1b5fb6d6daf.png",
+      "description": "Macro photography of a premium bicycle gear cassette"
+    },
+    "mtb_studio": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/images/32098a145c89d9f3aa503204a5592b52b5b13e9bd9d486f826fb8bd98619f9ca.png",
+      "description": "Studio product photography of a premium mountain bike"
+    },
+    "city_bike_studio": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/images/513896fa78c5fff0d21d011c9a7d882f01fd5058574f2ebccc48232ac8947cda.png",
+      "description": "Studio product photography of a modern urban city commuter bicycle"
+    },
+    "kids_bike": {
+      "url": "https://images.unsplash.com/photo-1696390015881-87746fa8f85f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwyfHxraWRzJTIwYmljeWNsZXxlbnwwfHx8fDE3NzYwMTAwNDJ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Pink kids bicycle"
+    },
+    "rentals_background": {
+      "url": "https://images.unsplash.com/photo-1761644593165-f7ffb9018a5e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxwZW9wbGUlMjBjeWNsaW5nJTIwb3V0ZG9vcnxlbnwwfHx8fDE3NzYwMTAwNDJ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Couple rides tandem bicycle at sunset"
+    },
+    "gallery_1": {
+      "url": "https://images.unsplash.com/photo-1503914068268-5413b35b45ad?crop=entropy&cs=srgb&fm=jpg",
+      "description": "Pink road bike"
+    },
+    "gallery_2": {
+      "url": "https://images.unsplash.com/photo-1768161680532-32d02decbcb4?crop=entropy&cs=srgb&fm=jpg",
+      "description": "Yellow mountain bike"
+    },
+    "gallery_3": {
+      "url": "https://images.unsplash.com/photo-1604242693134-6abf470de9ae?crop=entropy&cs=srgb&fm=jpg",
+      "description": "Brown bicycle in tilt shift lens"
+    }
+  },
+  "brand_logos_strategy": "CRITICAL: Do NOT use placeholder images (like placehold.co or dummyimage.com) for brand logos (Hercules, Hero Cycles, Firefox, Mach City, BSA). Instead, create typographic logos using pure HTML/Tailwind: a span with uppercase, font-bold, tracking-widest, text-muted-foreground. Optionally pair with a Lucide icon (e.g. Activity, Hexagon, Triangle).",
+  "icons": {
+    "library": "lucide-react",
+    "usage": "Use thick, clean strokes. Essential for Trust Bar (Star, Users, Shield, MapPin) and Contact section."
+  },
+  "page_sections": [
+    {
+      "name": "Navigation",
+      "rules": "Sticky top, backdrop-blur-xl, pure white text/icons on dark or dark on light. Contains Logo 'Just Ride Cycles', standard links, and prominent 'Enquire' CTA button."
+    },
+    {
+      "name": "Hero Section",
+      "rules": "Full viewport height (min-h-screen). Absolute positioned showroom_hero image with Ken Burns animation. Overlay bg-black/40. Huge text H1. Dual CTAs: solid Green WhatsApp button, outline Call button."
+    },
+    {
+      "name": "Trust Bar",
+      "rules": "Grid of 4 items below hero. White bg. '4.9 Google Rating', '554+ Reviews', '10+ Premium Brands', 'Service Center'. Use Lucide icons."
+    },
+    {
+      "name": "Showroom Experience",
+      "rules": "Split screen (md:grid-cols-2). Left column sticky text ('Experience the Ride'). Right column uses parallax_detail image. Padding py-24."
+    },
+    {
+      "name": "Scroll Animation Feature",
+      "rules": "Horizontal scroll container for 'Why Choose Us'. Wide selection, expert service, genuine parts."
+    },
+    {
+      "name": "Categories Bento Grid",
+      "rules": "Bento layout (1 big, 2 small, etc.). Use mtb_studio, city_bike_studio, kids_bike as backgrounds or isolated product shots. 'Mountain', 'City & Hybrid', 'Kids', 'Accessories'."
+    },
+    {
+      "name": "Cycle Showcase",
+      "rules": "Product cards. Image on top, Title, Spec tags (e.g. '21 Speed', 'Alloy Frame'). NO PRICES. Bottom of card: Full width 'Enquire on WhatsApp' CTA button (bg-[#22c55e])."
+    },
+    {
+      "name": "Rentals",
+      "rules": "Dark section (bg-[#111111]). rentals_background image overlaid softly on right. Left side large text 'Rent. Ride. Explore.' CTA 'Book Rental on WhatsApp'."
+    },
+    {
+      "name": "Buyer's Guide",
+      "rules": "4-step timeline. Clean typography. Numbered steps with borders."
+    },
+    {
+      "name": "Gallery Masonry",
+      "rules": "columns-2 md:columns-3 masonry layout. Break grid rigidity. Use gallery_1, gallery_2, gallery_3, plus other images. Add lightbox if possible."
+    },
+    {
+      "name": "Contact & Location",
+      "rules": "Grid layout. Left: Address in Kumbakonam, hours, big WhatsApp/Call CTAs. Right: Google Maps embed iframe."
+    },
+    {
+      "name": "Social Strip & Footer",
+      "rules": "Clean footer, muted background, brand name, quick links, copyright."
+    },
+    {
+      "name": "Floating Action Buttons",
+      "rules": "Fixed bottom-right corner. WhatsApp icon button and Call button, rounded-full, p-4, shadow-lg, bg-[#22c55e]."
+    }
+  ],
+  "accessibility_and_testing": {
+    "data_testid": "MANDATORY on all interactive elements (e.g., data-testid='hero-whatsapp-btn', data-testid='nav-link-showcase', data-testid='floating-whatsapp').",
+    "contrast": "Ensure white text on accent green meets WCAG. Muted text must be legible against white."
+  }
+}

@@ -32,7 +32,7 @@ export const IMAGES = {
   showroomHero: "https://static.prod-images.emergentagent.com/jobs/dd893e3f-5622-4ba7-b6c3-e664ac89e5c1/images/82911468586455801c4169aee94cf815779296c51bf71c6da9a749dcce91acb5.png",
   kidsBike: "https://images.unsplash.com/photo-1696390015881-87746fa8f85f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwyfHxraWRzJTIwYmljeWNsZXxlbnwwfHx8fDE3NzYwMTAwNDJ8MA&ixlib=rb-4.1.0&q=85",
   rentalsBg: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=1400&q=80",
-  pinkRoadBike: "https://images.unsplash.com/photo-1576435728678-68d0fbf94946?w=800&q=80",
+  pinkRoadBike: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&q=80",
   yellowMTB: "https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=800&q=80",
   brownBike: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=800&q=80",
   roadBike2: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&q=80",
@@ -111,7 +111,7 @@ export const CATEGORIES = [
   {
     name: "Road Bikes",
     desc: "Speed and distance",
-    image: IMAGES.pinkRoadBike,
+    image: IMAGES.cityBike,
     accentColor: "#0284c7",
   },
   {

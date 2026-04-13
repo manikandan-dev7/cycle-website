@@ -63,7 +63,7 @@ export default function ScrollAnimationSection() {
           <img
             src={IMAGES.mtbStudio}
             alt="Premium Mountain Bike"
-            className="h-[55vh] w-auto object-contain drop-shadow-2xl opacity-40"
+            className="h-[45vh] w-auto object-contain drop-shadow-2xl opacity-40"
             loading="lazy"
           />
         </div>

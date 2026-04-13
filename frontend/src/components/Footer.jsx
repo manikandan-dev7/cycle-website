@@ -6,14 +6,14 @@ export default function Footer() {
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <footer className="carbon-bg text-white relative">
+    <footer className="relative text-white carbon-bg">
       {/* Top metallic edge */}
       <div className="absolute top-0 left-0 right-0 h-px"
         style={{ background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent)' }} />
 
       {/* Social Strip */}
       <div className="py-7" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col items-center justify-between gap-4 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:flex-row">
           <p className="text-[#3a3a3a] text-sm font-medium tracking-wide">Follow our journey</p>
           <div className="flex items-center gap-5">
             {[
@@ -35,21 +35,21 @@ export default function Footer() {
 
       {/* Main columns */}
       <div className="py-14 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-14">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 gap-10 md:grid-cols-4 lg:gap-14">
 
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-9 h-9 rounded-lg overflow-hidden"
+                <div className="overflow-hidden rounded-lg w-9 h-9"
                   style={{
                     border: '1px solid rgba(255,255,255,0.08)',
                     boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.12), 0 2px 6px rgba(0,0,0,0.5)',
                   }}
                 >
-                  <img src={IMAGES.logo} alt="Just Ride Cycles" className="w-full h-full object-contain" />
+                  <img src={IMAGES.logo} alt="Just Ride Cycles" className="object-contain w-full h-full" />
                 </div>
-                <span className="chrome-text font-black text-base" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                <span className="text-base font-black chrome-text" style={{ fontFamily: 'Outfit, sans-serif' }}>
                   Just Ride Cycles
                 </span>
               </div>
@@ -58,7 +58,7 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-1.5">
                 <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-                <span className="chrome-text font-bold text-sm">4.9</span>
+                <span className="text-sm font-bold chrome-text">4.9</span>
                 <span className="text-[#3a3a3a] text-sm">· 554 Reviews</span>
               </div>
             </div>
@@ -67,7 +67,7 @@ export default function Footer() {
             <div>
               <h4 className="text-[#444] font-bold text-xs uppercase tracking-widest mb-5">Cycles</h4>
               <ul className="space-y-2.5">
-                {['Mountain Bikes', 'Road Bikes', 'Kids Cycles', 'Gear Cycles'].map((item) => (
+                {['Mountain Bike', 'Road Bikes', 'Kids Cycles', 'Gear Cycles'].map((item) => (
                   <li key={item}>
                     <button onClick={() => scrollTo('cycles')}
                       className="text-[#3a3a3a] hover:text-[#f97316] transition-colors text-sm">
@@ -129,7 +129,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="flex flex-col items-center justify-between gap-2 px-4 py-5 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:flex-row">
           <p className="text-[#2a2a2a] text-xs">© 2025 Just Ride Cycles · In association with Delta Cycle</p>
           <p className="text-[#2a2a2a] text-xs hidden sm:block">{SHOP.address}</p>
         </div>

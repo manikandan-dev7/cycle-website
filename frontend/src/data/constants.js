@@ -1,3 +1,6 @@
+import logoIcon from "../assets/icon-removebg-preview.png";
+import heroIcon from "../assets/hero-removebg-preview.png";
+
 export const SHOP = {
   name: "Just Ride Cycles",
   tagline: "Buy • Rent • Explore",
@@ -25,17 +28,15 @@ export const PHONE_LINK = `tel:+91${SHOP.phone.replace(/\s/g, "").slice(1)}`;
 export const IMAGES = {
   heroExterior:
     "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85",
-  cycleRows:
-    "https://images.unsplash.com/photo-1518655048521-f130df041f66?auto=format&fit=crop&w=1600&q=80",
+  cycleRows: heroIcon,
   interiorWide:
-    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1570865116909-d358c47f1806?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D0",
   interior2:
     "https://images.unsplash.com/photo-1516912482497-8b452cd44b8a?auto=format&fit=crop&w=1600&q=80",
-  logo: "https://images.unsplash.com/photo-1504198266289-1659872e6590?auto=format&fit=crop&w=400&q=80",
-  mtbStudio:
-    "https://images.unsplash.com/photo-1518655048521-f130df041f66?auto=format&fit=crop&w=1600&q=80",
+  logo: logoIcon,
+  mtbStudio: heroIcon,
   cityBike:
-    "https://images.unsplash.com/photo-1518032922675-c8ac8b3e0eda?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1570865116909-d358c47f1806?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   gearDetail:
     "https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1200&q=80",
   showroomHero:
@@ -45,13 +46,13 @@ export const IMAGES = {
   rentalsBg:
     "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=1400&q=80",
   pinkRoadBike:
-    "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&q=80",
+    "https://images.unsplash.com/photo-1503914068268-5413b35b45ad?auto=format&fit=crop&w=1600&q=80",
   yellowMTB:
-    "https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=800&q=80",
+    "https://images.unsplash.com/photo-1768161680532-32d02decbcb4?auto=format&fit=crop&w=1600&q=80",
   brownBike:
     "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=800&q=80",
   roadBike2:
-    "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&q=80",
+    "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?q=80&w=1122&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 };
 
 export const CYCLES = [
@@ -82,7 +83,7 @@ export const CYCLES = [
     badge: "Hybrid",
     specs: ["7 Speed", "Alloy Frame", "City Ready"],
     brand: "Firefox",
-    image: IMAGES.cityBike,
+    image: IMAGES.roadBike2,
     badgeColor: "#7c3aed",
   },
   {
@@ -92,8 +93,8 @@ export const CYCLES = [
     badge: "City",
     specs: ["Single Speed", "Lightweight", "Urban"],
     brand: "Mach City",
-    image: IMAGES.gearDetail,
-    badgeColor: "#ea580c",
+    image: IMAGES.cityBike,
+    badgeColor: "#0ea5e9",
   },
   {
     id: 5,
@@ -127,7 +128,7 @@ export const CATEGORIES = [
   {
     name: "Road Bikes",
     desc: "Speed and distance",
-    image: IMAGES.cityBike,
+    image: IMAGES.pinkRoadBike,
     accentColor: "#0284c7",
   },
   {
@@ -139,7 +140,7 @@ export const CATEGORIES = [
   {
     name: "Gear Cycles",
     desc: "Multi-speed, any terrain",
-    image: IMAGES.interiorWide,
+    image: IMAGES.yellowMTB,
     accentColor: "#7c3aed",
   },
 ];
